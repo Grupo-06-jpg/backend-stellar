@@ -6,13 +6,13 @@
   "scripts": {
     "start": "node app.js"
   },
-  "engines": {
-    "node": "18.x"
-  },
   "dependencies": {
     "express": "^4.17.1",
-    "@stellar/stellar-sdk": "^8.2.0"
+    "@stellar/stellar-sdk": "^8.1.0"
   },
   "author": "Tu Nombre",
-  "license": "ISC"
+  "license": "ISC",
+  "engines": {
+    "node": "18.x"
+  }
 }
