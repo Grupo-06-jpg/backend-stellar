@@ -1,18 +1,15 @@
 {
   "name": "mi-proyecto",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "Proyecto de ejemplo para conectar Stellar con Node.js",
+  "main": "app.js",
   "scripts": {
-    "start": "node app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
   "dependencies": {
-    "@stellar/stellar-sdk": "^12.3.0",
-    "express": "^4.21.1",
-    "stellar-sdk": "^12.3.0"
-  }
+    "express": "^4.17.1",
+    "@stellar/stellar-sdk": "^8.2.0"
+  },
+  "author": "Tu Nombre",
+  "license": "ISC"
 }
