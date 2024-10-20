@@ -1,6 +1,5 @@
-
 const express = require('express');
-const StellarSdk = require('@stellar/stellar-sdk');
+const StellarSdk = require('stellar-sdk'); // Aquí estás usando el SDK instalado correctamente
 const app = express();
 
 // Servir archivos estáticos desde la carpeta 'public'
@@ -13,10 +12,10 @@ app.get('/', (req, res) => {
 
 // Ruta para consultar saldo de una cuenta de Stellar
 app.get('/saldo', async (req, res) => {
-    const server = new StellarSdk.Server('https://horizon-testnet.stellar.org');
-    
-    // Clave pública de tu cuenta
-    const publicKey = ' GDJJIG7PLM6TQTP33ZF6RCZNYBISGTSV35FZJQ4JJQ5F7ULFE5Z2NM4N ';  // Reemplaza por la clave pública que quieras consultar
+    const server = new StellarSdk.Server('https://horizon.stellar.org');
+
+    // Clave pública de tu cuenta en Stellar
+    const publicKey = 'GDJJIG7PLM6TQTP33ZF6RCZNYBIGSTV35FZJQ4JJQ5F7ULFE5Z2NM4N'; // Reemplázala por la tuya
 
     try {
         const account = await server.loadAccount(publicKey);
@@ -31,7 +30,8 @@ app.get('/saldo', async (req, res) => {
 });
 
 // Configurar el puerto
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 4000;
 app.listen(port, () => {
     console.log(`Servidor corriendo en el puerto ${port}`);
 });
+
