@@ -12,8 +12,8 @@ app.get('/', (req, res) => {
 
 // Ruta para consultar saldo de una cuenta de Stellar
 app.get('/saldo', async (req, res) => {
-    const StellarSdk = require('@stellar/stellar-sdk');
-    const server = new StellarSdk.Server('https://horizon-testnet.stellar.org');
+    const { Server } = require('stellar-sdk');
+const server = new Server('https://horizon-testnet.stellar.org');
     
     // Clave pública de tu cuenta en Stellar
     const publicKey = 'GCINWC36NQJA5VJIIFGH535KDLA3UKD54IZSDFILZBQ4HZLQ2VELNMW'; // Reemplázala por tu clave pública
