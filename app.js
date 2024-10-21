@@ -10,11 +10,10 @@ app.get('/', (req, res) => {
     res.send('¡Hola desde el backend!');
   });  
 app.get('/saldo', async (req, res) => {
-    // Importar StellarSdk
-const StellarSdk = require('stellar-sdk');
-
-// Crear instancia del servidor
-const server = new StellarSdk.Server('https://horizon-testnet.stellar.org');
+    // Asegúrate de importar StellarSdk correctamente
+const { Server } = require('stellar-sdk');
+// Instancia del servidor de Stellar
+const server = new Server('https://horizon-testnet.stellar.org');
   
     const publicKey = 'GCINWC36NQJA5VJIIFGH53KDL...'; // Tu clave pública
   
