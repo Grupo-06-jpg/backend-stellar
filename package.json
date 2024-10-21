@@ -6,12 +6,10 @@
   "scripts": {
     "start": "node app.js"
   },
-  "dependencies": {
-    "@stellar/stellar-sdk": "^12.3.0",
-    "express": "^4.17.1",
-    "stellar-sdk": "^12.3.0"
-  },
-  "engines": {
-    "node": "18.x"
-  }
-}
+ "dependencies": {
+  "stellar-sdk": "^8.0.0",
+  "express": "^4.17.1"
+},
+"engines": {
+  "node": "18.x"
+}}
